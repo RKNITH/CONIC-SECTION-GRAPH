@@ -1,0 +1,111 @@
+
+* { box-sizing: border-box }
+
+:root {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 14px;
+    background: #212121;
+    color: #fafafa;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+a {
+    color: #616161;
+    text-decoration: none;
+}
+
+main {
+    background: #fafafa;
+    color: #212121;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+    overflow: hidden;
+}
+
+main > header {
+    background: linear-gradient(to bottom, #607D8B, #546E7A);
+    color: #ECEFF1;
+    font-size: 22px;
+    font-family: "IBM Plex Sans Condensed", "IBM Plex Sans", sans-serif;
+    text-align: center;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+    z-index: 1;
+    position: relative;
+}
+
+main > footer {
+    background: #E0E0E0;
+    color: #212121;
+    font-size: 13px;
+    text-align: center;
+    padding: 8px;
+}
+
+main > canvas {
+    background: #424242;
+    display: block;
+}
+
+main > section {
+    display: block;
+    z-index: 1;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, .5);
+    background: #EEEEEE;
+}
+
+main > section > aside {
+    background: linear-gradient(to bottom, #616161, #424242);
+    display: flex;
+    padding: 4px;
+    padding-bottom: 0;
+}
+
+main > section > aside a {
+    color: #E0E0E0;
+    padding: 8px;
+    padding-top: 8px;
+    display: block;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    margin: 0 4px;
+}
+
+    main > section > aside a:hover {
+        background: linear-gradient(to bottom , #EEEEEE, #bdbdbd);
+        color: #212121;
+    }
+
+    main > section > aside a.active {
+        background: linear-gradient(to bottom, #F5F5F5, #EEEEEE);
+        color: #212121;
+    }
+
+.equation {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 22px;
+    text-align: center;
+    padding: 8px;
+    font-style: italic;
+    cursor: default;
+}
+
+.equation *[contenteditable=true] {
+    font-style: normal;
+    background: #FFCCBC;
+}
+
+    .equation *[contenteditable=true]:empty::before {
+        content: attr(data-var);
+        color: #616161;
+        cursor: text;
+    }
